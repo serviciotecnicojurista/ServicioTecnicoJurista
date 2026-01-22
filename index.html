@@ -2,29 +2,63 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>STJ | Servicio Técnico de Aires Acondicionados</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f5f5f5;
+            background-color: #f4f6f8;
+            color: #333;
         }
 
+        /* HEADER */
         header {
-            background-color: #111;
+            background: linear-gradient(135deg, #0b1c2d, #123a5f);
             color: white;
-            padding: 15px;
+            padding: 35px 20px;
             text-align: center;
         }
 
+        /* LOGO STJ */
+        .logo {
+            display: inline-block;
+            border: 3px solid #7dd3fc;
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-weight: bold;
+            letter-spacing: 6px;
+            font-size: 36px;
+            position: relative;
+        }
+
+        /* detalle frío */
+        .logo::after {
+            content: "❄";
+            position: absolute;
+            right: -18px;
+            top: -18px;
+            background-color: #0b1c2d;
+            border-radius: 50%;
+            padding: 6px;
+            font-size: 18px;
+            color: #7dd3fc;
+        }
+
+        header p {
+            margin-top: 15px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* NAV */
         nav {
+            background-color: #162b45;
             display: flex;
             justify-content: center;
-            gap: 20px;
-            background-color: #222;
-            padding: 10px;
+            gap: 25px;
+            padding: 12px;
         }
 
         nav a {
@@ -33,49 +67,69 @@
             font-weight: bold;
         }
 
+        /* CONTENEDOR */
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
+            padding: 30px 20px;
         }
 
-        /* 🔴 SERVICIOS CON IMAGEN DE FONDO */
-        .servicios {
-            background-image: url("imagen.jpg"); /* ⬅ tu imagen */
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain; /* 🔴 NO se recorta */
-            min-height: 350px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            padding: 40px;
-        }
-
-        .servicios .contenido {
-            background-color: rgba(0, 0, 0, 0.6); /* oscurece para leer */
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
+        /* HERO */
+        .hero {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
             text-align: center;
-            max-width: 600px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .hero h2 {
+            margin-top: 0;
+            color: #0b1c2d;
+        }
+
+        /* SERVICIOS */
+        .servicios {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .servicio {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            border-top: 4px solid #7dd3fc;
+        }
+
+        .servicio h3 {
+            margin-top: 0;
+            color: #0b1c2d;
+        }
+
+        /* CONTACTO */
+        .contacto {
+            margin-top: 50px;
+            text-align: center;
         }
 
         .botones {
-            margin: 30px;
+            margin-top: 25px;
             display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
             justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .btn {
-            padding: 12px 20px;
+            padding: 14px 28px;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
             font-weight: bold;
+            border-radius: 8px;
+            font-size: 16px;
         }
 
         .whatsapp {
@@ -85,46 +139,83 @@
         .gmail {
             background-color: #d93025;
         }
+
+        /* FOOTER */
+        footer {
+            margin-top: 60px;
+            background-color: #0b1c2d;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            font-size: 14px;
+        }
     </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Nuestros Servicios</h1>
+    <div class="logo">STJ</div>
+    <p>Servicio Técnico Jurista · Aires Acondicionados</p>
 </header>
 
 <nav>
     <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contactos</a>
+    <a href="#contacto">Contacto</a>
 </nav>
 
 <div class="container">
 
+    <section class="hero">
+        <h2>Reparación · Mantenimiento · Instalación</h2>
+        <p>
+            Servicio técnico especializado en aires acondicionados.
+            Atención responsable, trabajos garantizados y asesoramiento profesional.
+        </p>
+    </section>
+
     <section id="servicios" class="servicios">
-        <div class="contenido">
-            <h2>Servicios</h2>
+        <div class="servicio">
+            <h3>🔧 Reparación</h3>
             <p>
-                Somos padre e hijo y realizamos trabajos con responsabilidad y compromiso.
+                Diagnóstico y reparación de equipos split, inverter y convencionales.
+            </p>
+        </div>
+
+        <div class="servicio">
+            <h3>🧼 Mantenimiento</h3>
+            <p>
+                Limpieza profunda, control de gas y prevención de fallas.
+            </p>
+        </div>
+
+        <div class="servicio">
+            <h3>❄️ Instalación</h3>
+            <p>
+                Colocación profesional respetando normas técnicas y de seguridad.
             </p>
         </div>
     </section>
 
-    <section id="contacto">
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+
         <div class="botones">
-            <!-- WhatsApp -->
             <a class="btn whatsapp" href="https://wa.me/5493413611579" target="_blank">
-                Contactar por WhatsApp
+                WhatsApp
             </a>
 
-            <!-- Gmail -->
             <a class="btn gmail" href="mailto:serviciotecnicojurista@gmail.com">
-                Enviar Gmail
+                Enviar correo
             </a>
         </div>
     </section>
 
 </div>
+
+<footer>
+    © STJ - Servicio Técnico Jurista | Rosario, Santa Fe
+</footer>
 
 </body>
 </html>
