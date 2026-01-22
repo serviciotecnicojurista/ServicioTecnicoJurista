@@ -13,32 +13,29 @@ body {
     color: #333;
 }
 
-/* HEADER CON IMAGEN DE FONDO */
+/* HEADER CON LOGO COMPLETO, SIN RECORTE */
 header {
     background-image: url("logo-stj.png");
-    background-size: contain;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60% auto;
     background-color: #1e73be;
 
     color: white;
     text-align: center;
-    padding: 90px 20px;
+    padding: 120px 20px 80px;
     position: relative;
 }
 
-/* OSCURECE LA IMAGEN PARA QUE SE LEA EL TEXTO */
+/* OSCURECER LEVEMENTE PARA LEER TEXTO */
 header::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.45);
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.35);
 }
 
-/* CONTENIDO DEL HEADER */
+/* CONTENIDO */
 .header-content {
     position: relative;
     z-index: 2;
@@ -84,6 +81,14 @@ footer {
     text-align: center;
     padding: 20px;
     color: #666;
+}
+
+/* AJUSTE PARA CELULARES */
+@media (max-width: 600px) {
+    header {
+        background-size: 85% auto;
+        padding: 100px 15px 70px;
+    }
 }
 </style>
 </head>
