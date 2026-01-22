@@ -1,78 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicio Técnico en Aires Acondicionados</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicio Técnico en Aires Acondicionados</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            color: #333;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
 
-        header {
-            background-color: #1e73be;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
+/* HEADER CON IMAGEN DE FONDO */
+header {
+    background-image: url("logo-stj.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 40px 20px;
-            background-color: white;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+    position: relative;
+}
 
-        h2 {
-            color: #1e73be;
-        }
+/* OSCURECE LA IMAGEN PARA QUE SE LEA EL TEXTO */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+}
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+/* CONTENIDO DEL HEADER */
+.header-content {
+    position: relative;
+    z-index: 2;
+}
 
-        ul li {
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
-        }
+/* SECCIONES */
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 8px;
+}
 
-        .whatsapp-btn {
-            display: inline-block;
-            background-color: #25D366;
-            color: white;
-            padding: 15px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            margin-top: 20px;
-        }
+h2 {
+    color: #1e73be;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #666;
-        }
-    </style>
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* BOTÓN WHATSAPP */
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Servicio Técnico en Aires Acondicionados</h1>
-    <p>Atención profesional en Rosario y alrededores</p>
+    <div class="header-content">
+        <h1>Servicio Técnico en Aires Acondicionados</h1>
+        <p>Atención profesional en Rosario y alrededores</p>
 
-    <a class="whatsapp-btn" 
-       href="https://wa.me/5493413611579" 
-       target="_blank">
-       Contactar por WhatsApp
-    </a>
+        <a class="whatsapp-btn"
+           href="https://wa.me/5493410000000"
+           target="_blank">
+           Contactar por WhatsApp
+        </a>
+    </div>
 </header>
 
 <section>
@@ -80,8 +107,7 @@
     <p>
         Soy técnico especializado en aires acondicionados. Me dedico a la instalación,
         mantenimiento y reparación de equipos, brindando un servicio responsable,
-        prolijo y confiable. Mi objetivo es crecer en el rubro y ofrecer soluciones
-        eficientes adaptadas a cada cliente.
+        prolijo y confiable.
     </p>
 </section>
 
