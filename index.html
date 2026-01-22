@@ -34,31 +34,40 @@
         }
 
         .container {
-            padding: 20px;
             max-width: 1000px;
             margin: auto;
         }
 
-        .imagen {
-            width: 100%;
-            height: 350px;
-            background-color: #000;
+        /* 🔴 SERVICIOS CON IMAGEN DE FONDO */
+        .servicios {
+            background-image: url("imagen.jpg"); /* ⬅ tu imagen */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain; /* 🔴 NO se recorta */
+            min-height: 350px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
+            padding: 40px;
         }
 
-        .imagen img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain; /* 🔴 CLAVE: no recorta la imagen */
+        .servicios .contenido {
+            background-color: rgba(0, 0, 0, 0.6); /* oscurece para leer */
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 600px;
         }
 
         .botones {
-            margin-top: 20px;
+            margin: 30px;
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .btn {
@@ -67,7 +76,6 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            text-align: center;
         }
 
         .whatsapp {
@@ -93,28 +101,23 @@
 
 <div class="container">
 
-    <div class="imagen">
-        <!-- 🔴 Cambiá solo la ruta de la imagen si querés -->
-        <img src="imagen.jpg" alt="Imagen del servicio">
-    </div>
-
-    <section id="servicios">
-        <h2>Servicios</h2>
-        <p>
-            Somos padre e hijo y realizamos trabajos con responsabilidad y compromiso.
-        </p>
+    <section id="servicios" class="servicios">
+        <div class="contenido">
+            <h2>Servicios</h2>
+            <p>
+                Somos padre e hijo y realizamos trabajos con responsabilidad y compromiso.
+            </p>
+        </div>
     </section>
 
     <section id="contacto">
-        <h2>Contactos</h2>
-
         <div class="botones">
-            <!-- ❗ WhatsApp SIN CAMBIOS -->
+            <!-- WhatsApp -->
             <a class="btn whatsapp" href="https://wa.me/5493413611579" target="_blank">
                 Contactar por WhatsApp
             </a>
 
-            <!-- ❗ Gmail SIN CAMBIOS -->
+            <!-- Gmail -->
             <a class="btn gmail" href="mailto:serviciotecnicojurista@gmail.com">
                 Enviar Gmail
             </a>
