@@ -2,185 +2,179 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>STJ | Servicio Técnico de Aires Acondicionados</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicio técnico de aire acondicionado en Rosario. Instalación, reparación y mantenimiento de equipos Split. Presupuesto sin cargo.">
+    <title>Servicio Técnico Jurista | Aires Acondicionados en Rosario</title>
+
     <style>
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
+            background: #f4f6f8;
             color: #333;
         }
-        /* HEADER */
+
         header {
-            background: linear-gradient(135deg, #0b1c2d, #123a5f);
+            background: #0a4d68;
             color: white;
-            padding: 35px 20px;
-            text-align: center;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        header img {
-            height: 80px; /* tamaño del logo */
-            margin-bottom: 15px;
-        }
-        header p {
-            margin-top: 10px;
-            font-size: 16px;
-            opacity: 0.9;
-        }
-        /* NAV */
+
         nav {
-            background-color: #162b45;
             display: flex;
-            justify-content: center;
-            gap: 25px;
-            padding: 12px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        /* CONTENEDOR */
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px 20px;
-        }
-        /* HERO */
-        .hero {
-            background-color: white;
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        .hero h2 {
-            margin-top: 0;
-            color: #0b1c2d;
-        }
-        /* SERVICIOS */
-        .servicios {
-            margin-top: 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .servicio {
-            background-color: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            border-top: 4px solid #7dd3fc;
-        }
-        .servicio h3 {
-            margin-top: 0;
-            color: #0b1c2d;
-        }
-        /* CONTACTO Y REDES */
-        .contacto, .redes {
-            margin-top: 50px;
-            text-align: center;
-        }
-        .botones {
-            margin-top: 25px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
         }
-        .btn {
-            padding: 14px 28px;
+
+        nav img {
+            height: 60px;
+        }
+
+        nav a {
             color: white;
+            margin-left: 15px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 8px;
-            font-size: 16px;
         }
-        .whatsapp { background-color: #25D366; }
-        .gmail { background-color: #d93025; }
-        .instagram { background-color: #E1306C; }
-        .tiktok { background-color: #010101; }
-        .facebook { background-color: #1877F2; } /* azul de Facebook */
-        /* FOOTER */
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #088395, #0a4d68);
+            color: white;
+        }
+
+        .hero h1 {
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 18px;
+            margin: 10px 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-whatsapp { background: #25D366; }
+        .btn-call { background: #e63946; }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0a4d68;
+        }
+
+        .services, .testimonios, .trabajos {
+            display: grid;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
         footer {
-            margin-top: 60px;
-            background-color: #0b1c2d;
+            background: #0a4d68;
             color: white;
             text-align: center;
-            padding: 18px;
-            font-size: 14px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .services, .testimonios, .trabajos {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
     </style>
 </head>
+
 <body>
+
 <header>
-    <img src="logo-stj.png" alt="STJ Logo">
-    <p>Servicio Técnico Jurista · Aires Acondicionados</p>
-    <p>Trabajamos en Rosario – Santa Fe y alrededores</p>
+    <nav>
+        <img src="logo-stj.png" alt="Logo Servicio Técnico Jurista">
+        <div>
+            <a href="#servicios">Servicios</a>
+            <a href="#trabajos">Trabajos</a>
+            <a href="#testimonios">Opiniones</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
 </header>
-<nav>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
-    <a href="#redes">Redes Sociales</a>
-</nav>
-<div class="container">
-    <section class="hero">
-        <h2>Reparación · Mantenimiento · Instalación</h2>
-        <p>
-            Servicio técnico especializado en aires acondicionados.
-            Atención responsable, trabajos garantizados y asesoramiento profesional.
-        </p>
-        <p>Zona de servicio: Rosario – Santa Fe y alrededores</p>
-    </section>
-    <section id="servicios" class="servicios">
-        <div class="servicio">
-            <h3>🔧 Reparación</h3>
-            <p>
-                Diagnóstico y reparación de equipos split, inverter y convencionales.
-            </p>
+
+<section class="hero">
+    <h1>Instalación, reparación y mantenimiento de aires acondicionados en Rosario</h1>
+    <p>Servicio técnico rápido, profesional y con garantía</p>
+    <a class="btn btn-whatsapp" href="https://wa.me/549XXXXXXXXXX" target="_blank">WhatsApp</a>
+    <a class="btn btn-call" href="tel:+54XXXXXXXXXX">Llamar Ahora</a>
+</section>
+
+<section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Instalación</h3>
+            <p>Instalamos equipos Split de todas las marcas con materiales de primera calidad.</p>
         </div>
-        <div class="servicio">
-            <h3>🧼 Mantenimiento</h3>
-            <p>
-                Limpieza profunda, control de gas y prevención de fallas.
-            </p>
+        <div class="card">
+            <h3>Reparación</h3>
+            <p>Detectamos y solucionamos fallas electrónicas, pérdidas de gas y problemas eléctricos.</p>
         </div>
-        <div class="servicio">
-            <h3>❄️ Instalación</h3>
-            <p>
-                Colocación profesional respetando normas técnicas y de seguridad.
-            </p>
+        <div class="card">
+            <h3>Mantenimiento</h3>
+            <p>Limpieza profunda y control de funcionamiento para alargar la vida útil del equipo.</p>
         </div>
-    </section>
-    <section id="contacto" class="contacto">
-        <h2>Contacto</h2>
-        <p>Atendemos en Rosario – Santa Fe y alrededores</p>
-        <div class="botones">
-            <a class="btn whatsapp" href="https://wa.me/5493413611579" target="_blank">
-                WhatsApp
-            </a>
-            <a class="btn gmail" href="mailto:serviciotecnicojurista@gmail.com">
-                Enviar correo
-            </a>
-        </div>
-    </section>
-    <section id="redes" class="redes">
-        <h2>Redes Sociales</h2>
-        <div class="botones">
-            <a class="btn instagram" href="https://www.instagram.com/serviciotecnicojurista/" target="_blank">
-                Instagram
-            </a>
-            <a class="btn tiktok" href="https://www.tiktok.com/@serviciotecnicojurista" target="_blank">
-                TikTok
-            </a>
-            <a class="btn facebook" href="https://www.facebook.com/profile.php?id=61586886543442" target="_blank">
-                Facebook
-            </a>
-        </div>
-    </section>
-</div>
+    </div>
+</section>
+
+<section id="trabajos">
+    <h2>Trabajos Realizados</h2>
+    <div class="trabajos">
+        <div class="card">Instalación de Split 3000 fg en vivienda familiar</div>
+        <div class="card">Mantenimiento preventivo en local comercial</div>
+        <div class="card">Reparación de equipo con pérdida de gas</div>
+    </div>
+</section>
+
+<section id="testimonios">
+    <h2>Opiniones de Clientes</h2>
+    <div class="testimonios">
+        <div class="card">“Excelente atención y rapidez. Muy recomendables.” – Marta G.</div>
+        <div class="card">“Me solucionaron el problema en el día.” – Carlos R.</div>
+        <div class="card">“Trabajo prolijo y precio justo.” – Laura M.</div>
+    </div>
+</section>
+
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p style="text-align:center;">Atendemos en Rosario, Santa Fe y alrededores</p>
+    <p style="text-align:center;">
+        <a class="btn btn-whatsapp" href="https://wa.me/549XXXXXXXXXX" target="_blank">Escribir por WhatsApp</a>
+        <a class="btn btn-call" href="tel:+54XXXXXXXXXX">Llamar</a>
+    </p>
+</section>
+
 <footer>
-    © STJ - Servicio Técnico Jurista | Rosario – Santa Fe y alrededores
+    © 2026 Servicio Técnico Jurista | Aires Acondicionados en Rosario
 </footer>
+
 </body>
 </html>
