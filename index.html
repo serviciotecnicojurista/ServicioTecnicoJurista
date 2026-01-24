@@ -9,122 +9,96 @@
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
+            background: #f4f6f8;
             color: #333;
-        }
-
-        /* HEADER */
-        header {
-            background: linear-gradient(135deg, #0b1c2d, #123a5f);
-            color: white;
-            padding: 35px 20px;
             text-align: center;
         }
 
-        header img {
-            height: 80px; /* tamaño del logo */
-            margin-bottom: 15px;
+        header {
+            background: #0d47a1;
+            color: white;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
         }
 
         header p {
-            margin-top: 10px;
-            font-size: 16px;
-            opacity: 0.9;
+            margin: 5px 0 0;
         }
 
-        /* NAV */
-        nav {
-            background-color: #162b45;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            padding: 12px;
+        section {
+            padding: 40px 20px;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
+        h2 {
+            color: #0d47a1;
+            margin-bottom: 25px;
         }
 
-        /* CONTENEDOR */
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px 20px;
-        }
-
-        /* HERO */
-        .hero {
-            background-color: white;
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-
-        .hero h2 {
-            margin-top: 0;
-            color: #0b1c2d;
-        }
-
-        /* SERVICIOS */
         .servicios {
-            margin-top: 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
         }
 
         .servicio {
-            background-color: white;
-            padding: 25px;
-            border-radius: 12px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 280px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            border-top: 4px solid #7dd3fc;
         }
 
         .servicio h3 {
             margin-top: 0;
-            color: #0b1c2d;
         }
 
-        /* CONTACTO Y REDES */
         .contacto, .redes {
-            margin-top: 50px;
-            text-align: center;
+            background: #e3f2fd;
         }
 
         .botones {
-            margin-top: 25px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            margin-top: 20px;
         }
 
         .btn {
-            padding: 14px 28px;
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 22px;
+            border-radius: 8px;
             color: white;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 8px;
-            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
         }
 
         .whatsapp { background-color: #25D366; }
         .gmail { background-color: #d93025; }
         .instagram { background-color: #E1306C; }
-        .tiktok { background-color: #010101; }
+        .tiktok { background-color: #000000; }
+        .facebook { background-color: #1877F2; }
 
-        /* FOOTER */
         footer {
-            margin-top: 60px;
-            background-color: #0b1c2d;
+            background: #0d47a1;
             color: white;
-            text-align: center;
-            padding: 18px;
+            padding: 15px;
             font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .servicios {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -132,77 +106,60 @@
 <body>
 
 <header>
-    <img src="logo-stj.png" alt="STJ Logo">
-    <p>Servicio Técnico Jurista · Aires Acondicionados</p>
-    <p>Trabajamos en Rosario – Santa Fe y alrededores</p>
+    <h1>STJ - Servicio Técnico Jurista</h1>
+    <p>Servicio profesional en Rosario – Santa Fe y alrededores</p>
 </header>
 
-<nav>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
-    <a href="#redes">Redes Sociales</a>
-</nav>
-
-<div class="container">
-
-    <section class="hero">
-        <h2>Reparación · Mantenimiento · Instalación</h2>
-        <p>
-            Servicio técnico especializado en aires acondicionados.
-            Atención responsable, trabajos garantizados y asesoramiento profesional.
-        </p>
-        <p>Zona de servicio: Rosario – Santa Fe y alrededores</p>
-    </section>
-
-    <section id="servicios" class="servicios">
+<section id="servicios">
+    <h2>Servicios</h2>
+    <div class="servicios">
         <div class="servicio">
-            <h3>🔧 Reparación</h3>
-            <p>
-                Diagnóstico y reparación de equipos split, inverter y convencionales.
-            </p>
+            <h3>🛠 Reparación</h3>
+            <p>Solución de fallas en aires acondicionados split y convencionales.</p>
         </div>
 
         <div class="servicio">
             <h3>🧼 Mantenimiento</h3>
-            <p>
-                Limpieza profunda, control de gas y prevención de fallas.
-            </p>
+            <p>Limpieza profunda, control de gas y prevención de fallas.</p>
         </div>
 
         <div class="servicio">
             <h3>❄️ Instalación</h3>
-            <p>
-                Colocación profesional respetando normas técnicas y de seguridad.
-            </p>
+            <p>Colocación profesional respetando normas técnicas y de seguridad.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="contacto" class="contacto">
-        <h2>Contacto</h2>
-        <p>Atendemos en Rosario – Santa Fe y alrededores</p>
-        <div class="botones">
-            <a class="btn whatsapp" href="https://wa.me/5493413611579" target="_blank">
-                WhatsApp
-            </a>
-            <a class="btn gmail" href="mailto:serviciotecnicojurista@gmail.com">
-                Enviar correo
-            </a>
-        </div>
-    </section>
+<section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p>Atendemos en Rosario – Santa Fe y alrededores</p>
+    <div class="botones">
+        <a class="btn whatsapp" href="https://wa.me/5493413611579" target="_blank">
+            WhatsApp
+        </a>
 
-    <section id="redes" class="redes">
-        <h2>Redes Sociales</h2>
-        <div class="botones">
-            <a class="btn instagram" href="https://www.instagram.com/TU_CUENTA/" target="_blank">
-                Instagram
-            </a>
-            <a class="btn tiktok" href="https://www.tiktok.com/@TU_CUENTA" target="_blank">
-                TikTok
-            </a>
-        </div>
-    </section>
+        <a class="btn gmail" href="mailto:serviciotecnicojurista@gmail.com">
+            Enviar correo
+        </a>
+    </div>
+</section>
 
-</div>
+<section id="redes" class="redes">
+    <h2>Redes Sociales</h2>
+    <div class="botones">
+        <a class="btn instagram" href="https://www.instagram.com/serviciotecnicojurista/" target="_blank">
+            Instagram
+        </a>
+
+        <a class="btn tiktok" href="https://www.tiktok.com/@serviciotecnicojurista" target="_blank">
+            TikTok
+        </a>
+
+        <a class="btn facebook" href="https://www.facebook.com/profile.php?id=61586886543442&sk=photos" target="_blank">
+            Facebook
+        </a>
+    </div>
+</section>
 
 <footer>
     © STJ - Servicio Técnico Jurista | Rosario – Santa Fe y alrededores
